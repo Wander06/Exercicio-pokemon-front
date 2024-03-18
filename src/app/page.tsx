@@ -1,14 +1,10 @@
-/*eslint-disable*/
+import { PokemonSearch } from "./ui/pokemonSearch";
 
-export default async function Home() {
-
-  const response = await fetch(`http://localhost:8080/gabite`);
-  const data = await response.json()
-  console.log(data);
+export default function Home() {
 
   return (
     <main className="">
-      <input type="text" />
+      <PokemonSearch/>
     </main>
   );
 }
