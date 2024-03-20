@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import './globals.css'
+import Image from "next/image"
+import { relative } from "path";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,11 +16,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body >
-        <header>
-        <ul>
-          <li>oi</li>
-          <li>oi</li>
-        </ul>
+        <header className="bg-red-500 w-full h-44 border-b-8 border-gray-400">
+          <Image 
+          src={"https://i.postimg.cc/bvsDWW1X/pokemon-logo-pokemon-icon-transparent-free-png.webp"}
+          alt="pokemon logo"
+          width={300}
+          height={100}
+          />
         </header>
         {children}
       </body>
